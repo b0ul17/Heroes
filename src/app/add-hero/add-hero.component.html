@@ -1,0 +1,45 @@
+<div class="formContainer">
+    <h2>Add hero details</h2>
+
+    <mat-card class="formCard">
+      <mat-card-header>
+      </mat-card-header>
+      <mat-card-content>
+        <div>
+          <br>
+          <mat-form-field >
+            <mat-label>Name</mat-label>
+            <input matInput  name="name" [(ngModel)]="hero.name">
+          </mat-form-field>
+          <br>
+          <mat-form-field >
+            <mat-label>Real Name</mat-label>
+            <input matInput name="realName" [(ngModel)]="hero.realName">
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+            <mat-label>Team</mat-label>
+            <mat-select name="team" [(ngModel)]="hero.team">
+              <mat-option  *ngFor="let team of teams;" [value]="team">{{team}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+            <mat-label>hasPowers</mat-label>
+            <mat-select name="hasPowers" [(ngModel)]="hero.hasPowers">
+              <mat-option  *ngFor="let power of powers;" [value]="power">{{power}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <br>
+        <div>
+          <button mat-raised-button color="primary" class="submitBtn" (click)="addHero()">Save</button>
+        </div>
+        <br>
+
+      </mat-card-content>
+
+
+    </mat-card>
+</div>

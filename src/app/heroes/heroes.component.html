@@ -1,0 +1,42 @@
+<div class="tableContainer">
+  <h2>My Heroes</h2>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> ID. </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element" routerLink="/details/{{element.id}}"> {{element.name}} </td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="realName">
+    <th mat-header-cell *matHeaderCellDef> Real Name </th>
+    <td mat-cell *matCellDef="let element" > {{element.realName}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="team">
+    <th mat-header-cell *matHeaderCellDef> Team </th>
+    <td mat-cell *matCellDef="let element" > {{element.team}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="hasPowers">
+    <th mat-header-cell *matHeaderCellDef> Has Powers </th>
+    <td mat-cell *matCellDef="let element" > {{element.hasPowers}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef> Action </th>
+    <td mat-cell *matCellDef="let element"> <button mat-raised-button color="warn" (click)="deleteHero(element)">Delete User</button> </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+</div>

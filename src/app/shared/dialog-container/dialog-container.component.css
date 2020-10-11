@@ -1,0 +1,12 @@
+mat-dialog-content {
+  margin-top: 24px;
+}
+
+mat-toolbar {
+  margin: -24px -24px 0 -24px;
+  width: auto;
+}
+
+mat-dialog-actions {
+  margin-bottom: -16px;
+}

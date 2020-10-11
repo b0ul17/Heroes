@@ -1,0 +1,45 @@
+<div class="formContainer">
+  <div *ngIf="hero">
+    <h2>{{hero.name}} details</h2>
+
+    <mat-card class="formCard" >
+      <mat-card-header>
+      </mat-card-header>
+      <mat-card-content>
+        <div>
+          <mat-form-field >
+            <mat-label>ID</mat-label>
+            <input matInput [(ngModel)]="hero.realName">
+          </mat-form-field>
+          <br>
+          <mat-form-field >
+            <mat-label>Name</mat-label>
+            <input matInput [(ngModel)]="hero.name">
+          </mat-form-field>
+          <br>
+          <mat-form-field >
+            <mat-label>Real Name</mat-label>
+            <input matInput [(ngModel)]="hero.realName">
+          </mat-form-field>
+          <br>
+          <mat-form-field >
+            <mat-label>Team</mat-label>
+            <input matInput [(ngModel)]="hero.team">
+          </mat-form-field>
+          <br>
+          <mat-form-field >
+            <mat-label>Has Powers</mat-label>
+            <input matInput [(ngModel)]="hero.hasPowers">
+          </mat-form-field>
+        </div>
+
+
+      </mat-card-content>
+    </mat-card>
+
+    <div>
+
+
+
+
+</div>
